@@ -11,7 +11,7 @@ const Projects = () => {
       projectName: "Trackgee",
       desc: "Trackgee: Vechile Tracking App",
       img: "/img/trackgee.jpeg",
-      to: "https://play.google.com/store/apps/details?id=com.aicicapp&hl=en_IN",
+      to: "",
       type: "mobile",
     },
     {
@@ -87,7 +87,7 @@ const Projects = () => {
       projectName: "Patient App",
       desc: "Patient App : Track Your Medical Report",
       img: "/img/thera.jpg",
-      to: "https://admin.theranize.com/login",
+      to: "https://play.google.com/store/apps/details?id=com.beaming.theranizepatientapp&hl=en_IN",
       type: "mobile",
     },
   
@@ -186,7 +186,7 @@ const Projects = () => {
                   as="button"
                   className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
                 >
-                  GitHub
+                  {/* GitHub */}
                 </CardItem>
               </div>
             </CardBody>
