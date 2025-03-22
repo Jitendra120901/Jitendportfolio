@@ -10,10 +10,10 @@ const CompaniesExperience = () => {
       duration: "10/12/2024 - Present",
       description: "Worked on app and web development",
       img: "/logo/theranize_logo.jpeg",
-      to: "https://admin.theranize.com/login",
+      to: "https://www.linkedin.com/company/theranize-health/posts/?feedView=all",
     },
     {
-      company: "* Concrete Software Solution Pvt. Ltd ( CSS )",
+      company: "Concrete Software Solution Pvt. Ltd ( CSS )",
       role: "Software Engineer",
       duration: "01/07/2024 - 10/12/2024",
       description: "Worked on app and web development,",

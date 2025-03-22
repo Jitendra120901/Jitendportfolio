@@ -139,59 +139,53 @@ const Projects = () => {
 
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 place-items-center mx-auto max-w-6xl">
         {visibleProjects.map((item, index) => (
-          <CardContainer
-            className="inter-var w-full max-w-xs perspective-1200"
-            key={index}
-          >
-            <CardBody className="bg-gradient relative group/card dark:hover:shadow-lg dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] h-auto rounded-lg p-4 border transform-style-3d">
-              <CardItem
-                translateZ="40"
-                className="text-base !pb-1 !m-0 font-bold text-slate-100 line-clamp-1"
-              >
-                {item.projectName}
-              </CardItem>
-              <CardItem as="p" translateZ="50" className="text-slate-500 text-xs line-clamp-2">
-                {item.desc}
-              </CardItem>
-              <CardItem
-                translateZ="60"
-                className="w-full mt-2 overflow-hidden"
-              >
-                <div className="flex justify-center items-center py-1">
-                  <div className="w-full h-[140px] rounded-lg overflow-hidden">
-                    <img
-                      src={item.img}
-                      className="w-full h-full object-contain bg-black/20"
-                      alt={`${item.projectName} thumbnail`}
-                      onError={(e) => {
-                        e.target.onerror = null;
-                        e.target.src = "/img/placeholder-image.png"; // Fallback image
-                      }}
-                    />
-                  </div>
-                </div>
-              </CardItem>
-              <div className="flex justify-between items-center mt-2">
-                {item.to && (
-                  <CardItem
-                    translateZ={15}
-                    as={Link}
-                    href={item.to}
-                    target="_blank"
-                    className="px-3 py-1 rounded-lg text-xs font-normal dark:text-white"
-                  >
-                    Try now →
-                  </CardItem>
-                )}
-                <CardItem
-                  translateZ={15}
-                  className="px-3 py-1 rounded-lg text-xs font-normal ml-auto text-slate-400"
-                >
-                  {item.type === "mobile" ? "Mobile App" : "Web App"}
-                </CardItem>
-              </div>
-            </CardBody>
-          </CardContainer>
+           <CardContainer className="inter-var max-w-xs perspective-1200" key={index}>
+           <CardBody className="bg-gradient relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[38rem] h-auto rounded-xl p-6 border">
+             <CardItem
+               translateZ="50"
+               className="lg:text-xl text-lg max-w-xs !pb-2 !m-0 font-bold text-slate-100"
+             >
+               {item.projectName}
+             </CardItem>
+             <CardItem as="p" translateZ="60" className="text-slate-500">
+               {item.desc}
+             </CardItem>
+             <CardItem
+               translateZ="100"
+               rotateX={20}
+               rotateZ={-10}
+               className="w-full mt-4"
+             >
+               <div className="flex justify-center items-center h-full w-full">
+                 <img
+                   src={item.img}
+                   className="h-[220px] lg:h-[400px] object-cover rounded-xl group-hover/card:shadow-xl"
+                   alt={`${item.projectName} thumbnail`}
+                 />
+               </div>
+             </CardItem>
+             <div className="flex justify-between items-center lg:mt-10">
+               <CardItem
+                 translateZ={20}
+                 translateX={-40}
+                 as={Link}
+                 href={item.to}
+                 target="_blank"
+                 className="px-4 py-2 rounded-xl text-sm font-normal dark:text-white"
+               >
+                 Try now →
+               </CardItem>
+               <CardItem
+                 translateZ={20}
+                 translateX={40}
+                 as="button"
+                 className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+               >
+                 {/* GitHub */}
+               </CardItem>
+             </div>
+           </CardBody>
+         </CardContainer>
         ))}
       </div>
       
