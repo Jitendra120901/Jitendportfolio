@@ -8,6 +8,7 @@ import {TracingBeam} from "./UI/TracingBeam"
 import { BackgroundBeams } from "./UI/BackgroundBeams";
 import { ToastContainer } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
+  import CompaniesExperience from "./Components/CompaniesExperience"
 
 export default function Home() {
   return (
@@ -15,9 +16,10 @@ export default function Home() {
       {/* <BackgroundBeams/> */}
       <TracingBeam>
       <HeroSection />
+      <Skills />
+      <CompaniesExperience/>
       <Projects />
       {/* <Card/> */}
-      <Skills />
       <Contact/>
       </TracingBeam>
       <ToastContainer/>

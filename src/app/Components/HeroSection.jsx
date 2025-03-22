@@ -49,13 +49,13 @@ const HeroSection = () => {
               Together
             </p>
             <p className="text-md text-justify	">
-              I am a **Flutter, React Native, and React.js Developer** with **3+
-              years of experience** in building high-performance, scalable
-              applications. My expertise lies in crafting **cross-platform
-              mobile apps and modern web interfaces**, ensuring seamless user
-              experiences. Passionate about **UI/UX design, API integrations,
-              and state management**, I strive to deliver innovative and
-              efficient software solutions.
+              I am a Flutter, React Native, and React.js Developer with 3+ years
+              of experience in building high-performance, scalable applications.
+              My expertise lies in crafting cross-platform mobile apps and
+              modern web interfaces, ensuring seamless user experiences.
+              Passionate about UI/UX design, API integrations, and state
+              management, I strive to deliver innovative and efficient software
+              solutions.
             </p>
             <a
               href="/pdf/latestResume.pdf"

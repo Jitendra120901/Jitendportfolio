@@ -16,12 +16,11 @@ const Skills = () => {
       title: "NODE , EXPRESS",
       img: "/img/nodejs.svg",
     },
-   
+
     {
       title: "JAVA SCRIPT",
       img: "/img/js.svg",
     },
-  
   ];
 
   const data2 = [
@@ -29,22 +28,19 @@ const Skills = () => {
     //   title: "TAILWIND CSS",
     //   img: "/img/tailwind.png",
     // },
-   
-   
-   
   ];
 
   return (
-    <div className="text-white lg:mt-32 mt-8 justify-center items-center">
+    <div className="text-white lg:mt-2 mt-2 justify-center items-center">
       <p className="lg:text-5xl text-3xl font-semibold text-center">Skills</p>
 
       <div className="flex flex-wrap lg:flex-nowrap justify-between lg:gap-8 gap-4 items-center lg:mt-12 mt-4">
         {data1.map((item, index) => (
           <button
-          className={`${
-           false ? "lg:opacity-0 hidden lg:block" : "opacity-1"
-          } relative inline-flex w-full overflow-hidden rounded-xl p-[1px] focus:outline-none hover:-translate-y-2 hover:cursor-pointer transition-all duration-300`}
-            key={index +10}
+            className={`${
+              false ? "lg:opacity-0 hidden lg:block" : "opacity-1"
+            } relative inline-flex w-full overflow-hidden rounded-xl p-[1px] focus:outline-none hover:-translate-y-2 hover:cursor-pointer transition-all duration-300`}
+            key={index + 10}
           >
             <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
             <span
@@ -64,7 +60,7 @@ const Skills = () => {
             className={`${
               false ? "lg:opacity-0 hidden lg:block" : "opacity-1"
             } relative inline-flex w-full overflow-hidden rounded-xl p-[1px] focus:outline-none hover:-translate-y-2 hover:cursor-pointer transition-all duration-300`}
-            key={index+20}
+            key={index + 20}
           >
             <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
             <span

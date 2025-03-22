@@ -1,10 +1,12 @@
-import React from "react";
-import { PinContainer } from "../UI/3DPin";
+"use client"
+
+import React, { useState } from "react";
 import { CardBody, CardContainer, CardItem } from "../UI/3DCard";
-import Image from "next/image";
 import Link from "next/link";
 
 const Projects = () => {
+  const [showAll, setShowAll] = useState(false);
+  
   const data = [
     {
       title: "Trackgee.com",
@@ -38,7 +40,6 @@ const Projects = () => {
       to: "https://play.google.com/store/apps/details?id=com.css.TraveloryApp&hl=en_IN",
       type: "mobile",
     },
-    
     {
       title: "Sharp-Quize.com",
       projectName: "Sharp-Quize",
@@ -71,7 +72,6 @@ const Projects = () => {
       to: "",
       type: "mobile",
     },
-   
     {
       title: "Internbaba.in",
       projectName: "Internbaba",
@@ -80,8 +80,6 @@ const Projects = () => {
       to: "https://play.google.com/store/search?q=internbaba&c=apps&hl=en_IN",
       type: "mobile",
     },
-   
-   
     {
       title: "Theranize.app",
       projectName: "Patient App",
@@ -90,10 +88,6 @@ const Projects = () => {
       to: "https://play.google.com/store/apps/details?id=com.beaming.theranizepatientapp&hl=en_IN",
       type: "mobile",
     },
-  
-
-
-
     {
       title: "Construnction.app",
       projectName: "Construnction",
@@ -118,7 +112,6 @@ const Projects = () => {
       to: "https://play.google.com/store/apps/details?id=com.avj&hl=en_IN",
       type: "mobile",
     },
-
     {
       title: "Housie Mania",
       projectName: "Housie Mania",
@@ -127,7 +120,6 @@ const Projects = () => {
       to: "https://play.google.com/store/apps/details?id=com.rshousiemania",
       type: "mobile",
     },
-    
     {
       title: "Theranize.app",
       projectName: "Theranize",
@@ -138,60 +130,79 @@ const Projects = () => {
     },
   ];
 
-  return (
-    <div className="text-white lg:mt-4 mt-8">
-      <p className="lg:text-5xl text-3xl font-semibold text-center">Projects</p>
+  // Display 6 projects initially, or all if showAll is true
+  const visibleProjects = showAll ? data : data.slice(0, 6);
 
-      <div className="grid lg:grid-cols-2 grid-flow-row mt-8">
-        {data.map((item, index) => (
-          <CardContainer className="inter-var" key={index}>
-            <CardBody className="bg-gradient relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[38rem] h-auto rounded-xl p-6 border">
+  return (
+    <div className="text-white lg:mt-4 mt-6 px-3">
+      <p className="lg:text-4xl text-2xl font-semibold text-center mb-6">Projects</p>
+
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 place-items-center mx-auto max-w-6xl">
+        {visibleProjects.map((item, index) => (
+          <CardContainer
+            className="inter-var w-full max-w-xs perspective-1200"
+            key={index}
+          >
+            <CardBody className="bg-gradient relative group/card dark:hover:shadow-lg dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] h-auto rounded-lg p-4 border transform-style-3d">
               <CardItem
-                translateZ="50"
-                className="lg:text-xl text-lg max-w-xs !pb-2 !m-0 font-bold text-slate-100"
+                translateZ="40"
+                className="text-base !pb-1 !m-0 font-bold text-slate-100 line-clamp-1"
               >
                 {item.projectName}
               </CardItem>
-              <CardItem as="p" translateZ="60" className="text-slate-500">
+              <CardItem as="p" translateZ="50" className="text-slate-500 text-xs line-clamp-2">
                 {item.desc}
               </CardItem>
               <CardItem
-                translateZ="100"
-                rotateX={20}
-                rotateZ={-10}
-                className="w-full mt-4"
+                translateZ="60"
+                className="w-full mt-2 overflow-hidden"
               >
-                <div className="flex justify-center items-center h-full w-full">
-                  <img
-                    src={item.img}
-                    className="h-[220px] lg:h-[400px] object-cover rounded-xl group-hover/card:shadow-xl"
-                    alt={`${item.projectName} thumbnail`}
-                  />
+                <div className="flex justify-center items-center py-1">
+                  <div className="w-full h-[140px] rounded-lg overflow-hidden">
+                    <img
+                      src={item.img}
+                      className="w-full h-full object-contain bg-black/20"
+                      alt={`${item.projectName} thumbnail`}
+                      onError={(e) => {
+                        e.target.onerror = null;
+                        e.target.src = "/img/placeholder-image.png"; // Fallback image
+                      }}
+                    />
+                  </div>
                 </div>
               </CardItem>
-              <div className="flex justify-between items-center lg:mt-10">
+              <div className="flex justify-between items-center mt-2">
+                {item.to && (
+                  <CardItem
+                    translateZ={15}
+                    as={Link}
+                    href={item.to}
+                    target="_blank"
+                    className="px-3 py-1 rounded-lg text-xs font-normal dark:text-white"
+                  >
+                    Try now →
+                  </CardItem>
+                )}
                 <CardItem
-                  translateZ={20}
-                  translateX={-40}
-                  as={Link}
-                  href={item.to}
-                  target="_blank"
-                  className="px-4 py-2 rounded-xl text-sm font-normal dark:text-white"
+                  translateZ={15}
+                  className="px-3 py-1 rounded-lg text-xs font-normal ml-auto text-slate-400"
                 >
-                  Try now →
-                </CardItem>
-                <CardItem
-                  translateZ={20}
-                  translateX={40}
-                  as="button"
-                  className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
-                >
-                  {/* GitHub */}
+                  {item.type === "mobile" ? "Mobile App" : "Web App"}
                 </CardItem>
               </div>
             </CardBody>
           </CardContainer>
         ))}
+      </div>
+      
+      <div className="flex justify-center mt-8">
+        <button
+          onClick={() => setShowAll(!showAll)}
+          className="bg-gradient relative group/card dark:hover:shadow-lg dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] px-6 py-2 bg-black/40  text-white border border-emerald-500/30 rounded-lg transition-all duration-300 shadow-lg shadow-emerald-500/10 hover:shadow-emerald-500/20"
+        >
+          {showAll ? "Show Fewer Projects" : "View More Projects"} 
+          <span className="ml-2">{showAll ? "↑" : "↓"}</span>
+        </button>
       </div>
     </div>
   );
