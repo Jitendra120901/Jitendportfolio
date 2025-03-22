@@ -14,7 +14,7 @@ const Skills = () => {
     },
     {
       title: "NODE , EXPRESS",
-      img: "/img/hook-form.svg",
+      img: "/img/nodejs.svg",
     },
    
     {
