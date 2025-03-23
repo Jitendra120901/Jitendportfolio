@@ -44,7 +44,7 @@ const Projects = () => {
       title: "Sharp-Quize.com",
       projectName: "Sharp-Quize",
       desc: "Sharp-Quize: Learning seamlessly",
-      img: "https://play-lh.googleusercontent.com/XOzkc7Mj6MEWs62Jj-7-_wTsdWziRSzVTzl0pNGds5seoAhf9Y08n1WHaCfmEb8WBa8=w1052-h592-rw",
+      img: "/img/sharpQuize.jpg",
       to: "https://play.google.com/store/search?q=sharp%20quize&c=apps&hl=en_IN",
       type: "mobile",
     },

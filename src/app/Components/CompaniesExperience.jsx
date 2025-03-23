@@ -49,10 +49,18 @@ const CompaniesExperience = () => {
               >
                 {item.company}
               </CardItem>
-              <CardItem as="p" translateZ="50" className="text-slate-500 text-sm">
+              <CardItem
+                as="p"
+                translateZ="50"
+                className="text-slate-500 text-sm"
+              >
                 {item.role} ({item.duration})
               </CardItem>
-              <CardItem as="p" translateZ="50" className="text-slate-400 text-xs">
+              <CardItem
+                as="p"
+                translateZ="50"
+                className="text-slate-400 text-xs"
+              >
                 {item.description}
               </CardItem>
               <CardItem

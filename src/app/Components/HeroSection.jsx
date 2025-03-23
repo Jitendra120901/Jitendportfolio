@@ -58,8 +58,8 @@ const HeroSection = () => {
               solutions.
             </p>
             <a
-              href="/pdf/lestestModifiedResume.pdf"
-              download="/pdf/lestestModifiedResume.pdf"
+              href="/pdf/Updated_Resume.pdf"
+              download="/pdf/Updated_Resume.pdf"
               className="rounded-lg text-white visit-btn text-center"
             >
               Download CV
