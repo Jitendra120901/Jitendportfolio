@@ -14,7 +14,7 @@ const Projects = () => {
       desc: "Trackgee: Vechile Tracking App",
       img: "/img/trackgee.jpeg",
       to: "",
-      type: "mobile",
+      type: "Mobile",
     },
     {
       title: "Parents Control",
@@ -22,7 +22,7 @@ const Projects = () => {
       desc: "Parents Control: Track your child",
       img: "/img/parentControl.jpg",
       to: "",
-      type: "mobile",
+      type: "Mobile",
     },
     {
       title: "JCwhatsapp",
@@ -30,7 +30,7 @@ const Projects = () => {
       desc: "Whatsapp chat app",
       img: "/img/jcWhatsapp.jpeg",
       to: "",
-      type: "mobile",
+      type: "Mobile",
     },
     {
       title: "Travelory",
@@ -46,7 +46,7 @@ const Projects = () => {
       desc: "Sharp-Quize: Learning seamlessly",
       img: "/img/sharpQuize.jpg",
       to: "https://play.google.com/store/search?q=sharp%20quize&c=apps&hl=en_IN",
-      type: "mobile",
+      type: "Mobile",
     },
     {
       title: "Aicic.com",
@@ -54,7 +54,7 @@ const Projects = () => {
       desc: "Aicic: Social Media App",
       img: "/img/aicic.jpg",
       to: "https://play.google.com/store/apps/details?id=com.aicicapp&hl=en_IN",
-      type: "mobile",
+      type: "Mobile",
     },
     {
       title: "Blind Spot",
@@ -62,7 +62,7 @@ const Projects = () => {
       desc: "Blind Spot : Identify the Edges of Objec and give its Measurment",
       img: "/img/arObjectDetector.jpg",
       to: "",
-      type: "mobile",
+      type: "Mobile",
     },
     {
       title: "mycity.in",
@@ -70,7 +70,7 @@ const Projects = () => {
       desc: "My City: Complete Services Solution",
       img: "/img/mycity.jpg",
       to: "",
-      type: "mobile",
+      type: "Mobile",
     },
     {
       title: "Internbaba.in",
@@ -78,7 +78,7 @@ const Projects = () => {
       desc: "Internbaba: Search Your Job",
       img: "/img/internbaba.jpg",
       to: "https://play.google.com/store/search?q=internbaba&c=apps&hl=en_IN",
-      type: "mobile",
+      type: "Mobile",
     },
     {
       title: "Theranize.app",
@@ -86,7 +86,7 @@ const Projects = () => {
       desc: "Patient App : Track Your Medical Report",
       img: "/img/thera.jpg",
       to: "https://play.google.com/store/apps/details?id=com.beaming.theranizepatientapp&hl=en_IN",
-      type: "mobile",
+      type: "Mobile",
     },
     {
       title: "Construnction.app",
@@ -94,7 +94,7 @@ const Projects = () => {
       desc: "Construnction : E-commerce App For Construnction material",
       img: "/img/construnction.jpeg",
       to: "https://admin.theranize.com/login",
-      type: "mobile",
+      type: "Mobile",
     },
     {
       title: "Smile Care Agency",
@@ -102,7 +102,7 @@ const Projects = () => {
       desc: "Smile Care Agency : On This Platform We can Search a Job FOr Carer",
       img: "/img/smileCare.jpeg",
       to: "",
-      type: "mobile",
+      type: "Mobile",
     },
     {
       title: "AVJ",
@@ -110,7 +110,7 @@ const Projects = () => {
       desc: "At AVJ Laboratories, we stand as a leading Pharmaceutical Company",
       img: "https://play-lh.googleusercontent.com/dPbSPovc7xAme_43TUhXV_rl-kx5h0iWFvu3HYJTpEymCBTQmXOoxMNtDm-zYwryrQ=w1052-h592-rw",
       to: "https://play.google.com/store/apps/details?id=com.avj&hl=en_IN",
-      type: "mobile",
+      type: "Mobile",
     },
     {
       title: "Housie Mania",
@@ -118,7 +118,7 @@ const Projects = () => {
       desc: "Housie Mania: Modern Tambola Housie Number Generator & Offline Ticket Generator",
       img: "/img/housiaMania.jpeg",
       to: "https://play.google.com/store/apps/details?id=com.rshousiemania",
-      type: "mobile",
+      type: "Mobile",
     },
     {
       title: "Theranize.app",
@@ -126,7 +126,7 @@ const Projects = () => {
       desc: "Theranize: Healthcare management platform",
       img: "/img/therenize.png",
       to: "https://admin.theranize.com/login",
-      type: "pc",
+      type: "Pc",
     },
   ];
 
