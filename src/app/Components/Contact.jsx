@@ -2,16 +2,16 @@
 import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
+import Image from 'next/image';
 
 const Contact = () => {
-
   const form = useRef();
   const [isLoading, setIsLoading] = useState(false);
 
-  const notify = () => toast.success("Message sent succesfully!", {
+  const notify = () => toast.success("Message sent successfully!", {
     theme: "dark"
   });
-  const errorNotify = () => toast.success("Something went wrong! Please try again later!", {
+  const errorNotify = () => toast.error("Something went wrong! Please try again later!", {
     theme: "dark"
   });
 
@@ -39,25 +39,26 @@ const Contact = () => {
   };
 
   return (
-    <div className="text-white lg:mt-32 mt-8 lg:px-16">
-      <p className="lg:text-5xl text-2xl font-semibold text-center">Get In Touch</p>
+    <div className="text-white lg:mt-32 mt-8 lg:px-16 px-4">
+      <p className="lg:text-5xl text-3xl font-semibold text-center mb-12">Get In Touch</p>
 
-      <div className="mt-16 flex flex-col lg:flex-row lg:gap-64 gap-8">
-        <div className="flex-grow">
-          <form ref={form} onSubmit={sendEmail}>
-            <div className="flex justify-between lg:gap-16 gap-4">
+      <div className="mt-8 lg:mt-16 flex flex-col lg:flex-row lg:gap-64 gap-12">
+        {/* Form Section */}
+        <div className="flex-grow w-full">
+          <form ref={form} onSubmit={sendEmail} className="space-y-6">
+            <div className="flex flex-col lg:flex-row lg:space-x-4 space-y-6 lg:space-y-0">
               <input
                 type="text"
                 name='name'
                 placeholder="NAME"
-                className="bg-transparent focus:outline-none input flex-grow"
+                className="bg-transparent border-b border-white/50 focus:outline-none input w-full pb-2"
                 required
               />
               <input
                 type="email"
                 name='email'
-                placeholder="email"
-                className="bg-transparent focus:outline-none input flex-grow"
+                placeholder="EMAIL"
+                className="bg-transparent border-b border-white/50 focus:outline-none input w-full pb-2"
                 required
               />
             </div>
@@ -65,75 +66,85 @@ const Contact = () => {
             <textarea
               name="message"
               id="message"
-              cols="30"
               rows="7"
-              className="input mt-12 focus:outline-none w-full"
+              className="input w-full bg-transparent border border-white/50 rounded-lg p-4 focus:outline-none"
               placeholder="Write your message..."
               required
             ></textarea>
 
-
-            <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-full border border-slate-400 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium mt-8 send-btn" type='submit' disabled={isLoading}>
+            <button 
+              className="w-full lg:w-auto inline-flex h-12 animate-shimmer items-center justify-center rounded-full border border-slate-400 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium send-btn" 
+              type='submit' 
+              disabled={isLoading}
+            >
               {isLoading ? "Sending..." : "SEND MESSAGE"}
             </button>
           </form>
         </div>
 
-        <div className="flex-grow flex-col flex-wrap justify-between hidden lg:flex">
-          <div>
-            <p className="text-[#b3b3b3]">EMAIL</p>
-            <p>jitendrachoudhary2729@gmail.com</p>
-          </div>
-
-          <div>
-            <p className="text-[#b3b3b3]">PHONE</p>
-            <p>7049216550</p>
-          </div>
-
-          <div>
-            <p className="text-[#b3b3b3]">ADDRESS</p>
-            <p>Kirodimalnagar, Raigarh, Chhattisgarh (496001)</p>
-          </div>
-
-          <div>
-            <p className="text-[#b3b3b3]">SOCIAL</p>
-            <div className="flex gap-4">
-                <a className="mt-1" href="https://www.linkedin.com/in/jitendra-choudhary-b69668196/" target="_blank"><img src="/img/linkedin-blue.png" alt="" width="30" /></a>
-                <a className="mt-1" href="https://github.com/Jitendra120901" target="_blank"><img src="/img/github.webp" alt="" width="30" /></a>
-              </div>
-          </div>
-        </div>
-
-        <div className='flex gap-8 mt-8 lg:hidden'>
-          <div className="flex flex-col gap-4">
+        {/* Contact Information */}
+        <div className="flex-grow">
+          {/* Desktop Contact Info */}
+          <div className="hidden lg:block space-y-8">
             <div>
-              <p className="text-[#b3b3b3]">EMAIL</p>
+              <p className="text-[#b3b3b3] mb-2">EMAIL</p>
               <p>jitendrachoudhary2729@gmail.com</p>
             </div>
 
             <div>
-            <p className="text-[#b3b3b3]">ADDRESS</p>
-            <p>Kirodimalnagar, Raigarh, Chhattisgarh (496001)</p>
-            </div>
-
-          </div>
-
-          <div className="flex flex-col gap-4">
-            <div>
-
-              <p className="text-[#b3b3b3]">PHONE</p>
+              <p className="text-[#b3b3b3] mb-2">PHONE</p>
               <p>7049216550</p>
             </div>
 
             <div>
-              <p className="text-[#b3b3b3]">SOCIAL</p>
-              <div className="flex gap-2">
-                <a className="mt-1" href="https://www.linkedin.com/in/v-satish2023/" target="_blank"><img src="/img/linkedin-blue.png" alt="" width="30" /></a>
-                <a className="mt-1" href="https://github.com/s4t1sh" target="_blank"><img src="/img/github.webp" alt="" width="30" /></a>
+              <p className="text-[#b3b3b3] mb-2">ADDRESS</p>
+              <p>Kirodimalnagar, Raigarh, Chhattisgarh (496001)</p>
+            </div>
+
+            <div>
+              <p className="text-[#b3b3b3] mb-2">SOCIAL</p>
+              <div className="flex gap-4">
+                <a href="https://www.linkedin.com/in/jitendra-choudhary-b69668196/" target="_blank" rel="noopener noreferrer">
+                  <Image src="/img/linkedin-blue.png" alt="LinkedIn" width={30} height={30} />
+                </a>
+                <a href="https://github.com/Jitendra120901" target="_blank" rel="noopener noreferrer">
+                  <Image src="/img/github.webp" alt="GitHub" width={30} height={30} />
+                </a>
               </div>
             </div>
           </div>
 
+          {/* Mobile Contact Info */}
+          <div className="lg:hidden flex flex-col space-y-6">
+            <div className="flex justify-between">
+              <div className="space-y-2">
+                <p className="text-[#b3b3b3]">EMAIL</p>
+                <p className="text-sm">jitendrachoudhary2729@gmail.com</p>
+              </div>
+
+              <div className="space-y-2">
+                <p className="text-[#b3b3b3]">PHONE</p>
+                <p className="text-sm">7049216550</p>
+              </div>
+            </div>
+
+            <div>
+              <p className="text-[#b3b3b3] mb-2">ADDRESS</p>
+              <p className="text-sm">Kirodimalnagar, Raigarh, Chhattisgarh (496001)</p>
+            </div>
+
+            <div>
+              <p className="text-[#b3b3b3] mb-2">SOCIAL</p>
+              <div className="flex gap-4">
+                <a href="https://www.linkedin.com/in/jitendra-choudhary-b69668196/" target="_blank" rel="noopener noreferrer">
+                  <Image src="/img/linkedin-blue.png" alt="LinkedIn" width={25} height={25} />
+                </a>
+                <a href="https://github.com/Jitendra120901" target="_blank" rel="noopener noreferrer">
+                  <Image src="/img/github.webp" alt="GitHub" width={25} height={25} />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
