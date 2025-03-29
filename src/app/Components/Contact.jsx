@@ -122,7 +122,7 @@ const Contact = () => {
             <div>
 
               <p className="text-[#b3b3b3]">PHONE</p>
-              <p>8817591137</p>
+              <p>7049216550</p>
             </div>
 
             <div>
