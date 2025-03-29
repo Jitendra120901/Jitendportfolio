@@ -28,20 +28,24 @@ const HeroSection = () => {
 
       <div>
         <div className="flex lg:flex-row flex-col lg:gap-6 gap-2">
-          <div className="lg:grid flex grid-rows-2 lg:gap-6 gap-2">
-            <div className="flex flex-grow justify-center items-center lg:p-8 p-4 text-white flex-col border-purple-custom rounded-2xl">
-              <p className="lg:text-6xl text-5xl font-semibold">
-                15<span style={{ color: "#c97bff" }}>+</span>
-              </p>
-              <p className="whitespace-nowrap">completed projects</p>
-            </div>
-            <div className="flex flex-grow justify-center items-center lg:p-8 p-4 text-white flex-col border-purple-custom rounded-2xl">
-              <p className="lg:text-6xl text-5xl font-semibold">
-                3<span style={{ color: "#c97bff" }}>+</span>
-              </p>
-              <p className="whitespace-nowrap">Years Experience</p>
-            </div>
-          </div>
+        <div className="lg:grid lg:grid-rows-2 flex flex-col lg:gap-6 gap-2">
+ <div className="flex flex-grow justify-center items-center lg:p-8 p-4 text-white flex-col border-purple-custom rounded-2xl">
+   <p className="lg:text-6xl text-4xl font-semibold">
+     15<span style={{ color: "#c97bff" }}>+</span>
+   </p>
+   <p className="lg:whitespace-nowrap text-sm lg:text-base text-center">
+     completed projects
+   </p>
+ </div>
+ <div className="flex flex-grow justify-center items-center lg:p-8 p-4 text-white flex-col border-purple-custom rounded-2xl">
+   <p className="lg:text-6xl text-4xl font-semibold">
+     3<span style={{ color: "#c97bff" }}>+</span>
+   </p>
+   <p className="lg:whitespace-nowrap text-sm lg:text-base text-center">
+     Years Experience
+   </p>
+ </div>
+</div>
 
           <div className="flex flex-col gap-8 text-white border-purple-custom lg:p-10 p-4 rounded-2xl">
             <p className="lg:text-3xl text-2xl font-semibold">
